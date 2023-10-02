@@ -1,0 +1,11 @@
+{
+  "name": "arbitrage-mev-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "farhan",
+  "license": "MIT",
+  "dependencies": {
+    "@flashbots/ethers-provider-bundle": "^0.6.2",
+    "ethers": "5.7.2"
+  }
+}
