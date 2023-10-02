@@ -20,10 +20,7 @@ const wsProvider = new providers.WebSocketProvider(
 );
 
 // 3. The unique ID for flashbots to identify you and build trust over time
-const authSigner = new Wallet(
-  "0x83565a9dafb10577ed43b2a0b911656e18fbc25cf35f211db891f23815ff7c45",
-  provider
-);
+const authSigner = new Wallet("use-your-wallet-private-key-here", provider);
 // The address of the authSigner is 0x09Dad4e56b1B2A7eeD9C41691EbDD4EdF0D80a46
 
 const start = async () => {
@@ -55,7 +52,7 @@ const start = async () => {
       // Both transactions are the same but one is type 1 and the other type 2 after the gas changes
       signer: authSigner,
       transaction: {
-        to: "0x2c3fF32c7F6C7f83fFd13C76Cfef67C0E9811240",
+        to: "address-here",
         type: 2,
         maxFeePerGas: PRIORITY_FEE.add(maxBaseFeeInFutureBlock),
         maxPriorityFeePerGas: PRIORITY_FEE,
@@ -69,7 +66,7 @@ const start = async () => {
     {
       signer: authSigner,
       transaction: {
-        to: "0x2c3fF32c7F6C7f83fFd13C76Cfef67C0E9811240",
+        to: "address-here",
         gasPrice: LEGACY_GAS_PRICE,
         data: "0x",
         value: ethers.utils.parseEther(amountInEther),
